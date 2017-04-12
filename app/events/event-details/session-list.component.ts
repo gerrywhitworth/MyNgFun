@@ -28,7 +28,6 @@ export class SessionListComponent implements OnChanges {
       })
     }
   }
-  
 }
 
 function sortByNameAsc(s1: ISession, s2: ISession) {

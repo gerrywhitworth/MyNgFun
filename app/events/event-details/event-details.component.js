@@ -38,9 +38,10 @@ var EventDetailsComponent = (function () {
             templateUrl: '/app/events/event-details/event-details.component.html',
             styles: ["\n    .container { padding-left:20px; padding-right:20px; }\n    .event-image { height:100px; }\n    a {cursor:pointer}\n  "]
         }), 
-        __metadata('design:paramtypes', [index_1.EventService, router_1.ActivatedRoute])
+        __metadata('design:paramtypes', [index_1.EventService, (typeof (_a = typeof router_1.ActivatedRoute !== 'undefined' && router_1.ActivatedRoute) === 'function' && _a) || Object])
     ], EventDetailsComponent);
     return EventDetailsComponent;
+    var _a;
 }());
 exports.EventDetailsComponent = EventDetailsComponent;
 //# sourceMappingURL=event-details.component.js.map

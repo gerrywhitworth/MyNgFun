@@ -45,9 +45,10 @@ var ProfileComponent = (function () {
             templateUrl: 'app/user/profile.component.html',
             styles: ["\n    em {float:right; color:#E05C65; padding-left: 10px;}\n    .error input {background-color:#E3C3C5;}\n    .error ::-webkit-input-placeholder { color: #999; }\n    .error ::-moz-placeholder { color: #999; }\n    .error :-moz-placeholder { color:#999; }\n    .error :ms-input-placeholder { color: #999; }\n  "]
         }), 
-        __metadata('design:paramtypes', [router_1.Router, auth_service_1.AuthService])
+        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, auth_service_1.AuthService])
     ], ProfileComponent);
     return ProfileComponent;
+    var _a;
 }());
 exports.ProfileComponent = ProfileComponent;
 //# sourceMappingURL=profile.component.js.map

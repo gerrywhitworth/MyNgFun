@@ -24,9 +24,10 @@ var EventRouteActivator = (function () {
     };
     EventRouteActivator = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [event_service_1.EventService, router_1.Router])
+        __metadata('design:paramtypes', [event_service_1.EventService, (typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object])
     ], EventRouteActivator);
     return EventRouteActivator;
+    var _a;
 }());
 exports.EventRouteActivator = EventRouteActivator;
 //# sourceMappingURL=event-route-activator.service.js.map

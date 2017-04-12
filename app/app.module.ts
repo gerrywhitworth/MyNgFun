@@ -12,7 +12,8 @@ import { EventService,
   EventRouteActivator,
   EventListResolver,
   CreateSessionComponent,
-  SessionListComponent } from './events/index'
+  SessionListComponent,
+  DurationPipe } from './events/index'
 import { ToastrService } from './common/toastr.service'
 import { CollapsibleWellComponent } from './common/collapsible-well.component'
 import { NavBarComponent } from './nav/navbar.component'
@@ -36,7 +37,8 @@ import { AuthService } from './user/auth.service'
     CreateSessionComponent,
     Error404Component,
     SessionListComponent,
-    CollapsibleWellComponent ],
+    CollapsibleWellComponent,
+    DurationPipe ],
   providers: [
     EventService, 
     ToastrService,

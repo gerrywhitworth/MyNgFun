@@ -14,10 +14,10 @@ var AuthService = (function () {
     }
     AuthService.prototype.loginUser = function (userName, password) {
         this.currentUser = {
-            id: 1,
+            id: Math.random(),
             userName: userName,
-            firstName: 'John',
-            lastName: 'Papa'
+            firstName: 'Gerry',
+            lastName: 'Whitworth'
         };
     };
     AuthService.prototype.isAuthenticated = function () {

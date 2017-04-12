@@ -28,10 +28,9 @@ var EventsListComponent = (function () {
         core_1.Component({
             template: "\n    <div>\n    <h1>Upcoming Angular 2 Events</h1>\n    <hr/>\n    <div class=\"row\">\n      <div *ngFor=\"let event of events\" class=\"col-md-5\">\n        <event-thumbnail (click)=\"handleThumbnailClick(event.name)\" [event]=\"event\"></event-thumbnail>\n      </div>\n    </div>\n  "
         }), 
-        __metadata('design:paramtypes', [event_service_1.EventService, toastr_service_1.ToastrService, (typeof (_a = typeof router_1.ActivatedRoute !== 'undefined' && router_1.ActivatedRoute) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [event_service_1.EventService, toastr_service_1.ToastrService, router_1.ActivatedRoute])
     ], EventsListComponent);
     return EventsListComponent;
-    var _a;
 }());
 exports.EventsListComponent = EventsListComponent;
 //# sourceMappingURL=events-list.component.js.map

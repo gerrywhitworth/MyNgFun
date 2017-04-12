@@ -28,10 +28,9 @@ var LoginComponent = (function () {
             templateUrl: 'app/user/login.component.html',
             styles: ["\n    em { float:right; color:#E05C65; padding-left:10px; }\n  "]
         }), 
-        __metadata('design:paramtypes', [auth_service_1.AuthService, (typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [auth_service_1.AuthService, router_1.Router])
     ], LoginComponent);
     return LoginComponent;
-    var _a;
 }());
 exports.LoginComponent = LoginComponent;
 //# sourceMappingURL=login.component.js.map

@@ -16,6 +16,7 @@ var EventDetailsComponent = (function () {
         this.eventService = eventService;
         this.route = route;
         this.filterBy = 'all';
+        this.sortBy = 'votes';
     }
     EventDetailsComponent.prototype.addSession = function () {
         this.addMode = true;
@@ -31,7 +32,11 @@ var EventDetailsComponent = (function () {
         this.addMode = false;
     };
     EventDetailsComponent.prototype.ngOnInit = function () {
-        this.event = this.eventService.getEvent(+this.route.snapshot.params['id']);
+        var _this = this;
+        this.route.params.forEach(function (params) {
+            _this.event = _this.eventService.getEvent(+params['id']);
+            _this.addMode = false;
+        });
     };
     EventDetailsComponent = __decorate([
         core_1.Component({

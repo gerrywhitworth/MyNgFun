@@ -15,10 +15,18 @@ var LoginComponent = (function () {
     function LoginComponent(authService, router) {
         this.authService = authService;
         this.router = router;
+        this.loginInvalid = false;
     }
     LoginComponent.prototype.login = function (formValues) {
-        this.authService.loginUser(formValues.userName, formValues.password);
-        this.router.navigate(['events']);
+        var _this = this;
+        this.authService.loginUser(formValues.userName, formValues.password).subscribe(function (resp) {
+            if (!resp) {
+                _this.loginInvalid = true;
+            }
+            else {
+                _this.router.navigate(['events']);
+            }
+        });
     };
     LoginComponent.prototype.cancel = function () {
         this.router.navigate(['events']);
@@ -26,7 +34,7 @@ var LoginComponent = (function () {
     LoginComponent = __decorate([
         core_1.Component({
             templateUrl: 'app/user/login.component.html',
-            styles: ["\n    em { float:right; color:#E05C65; padding-left:10px; }\n  "]
+            styles: ["\n    em {float:right; color:#E05C65; padding-left:10px;}\n  "]
         }), 
         __metadata('design:paramtypes', [auth_service_1.AuthService, router_1.Router])
     ], LoginComponent);

@@ -40,10 +40,18 @@ var ProfileComponent = (function () {
         return this.lastName.valid || this.lastName.untouched;
     };
     ProfileComponent.prototype.saveProfile = function (formValues) {
+        var _this = this;
         if (this.profileForm.valid) {
-            this.authService.updateCurrentUser(formValues.firstName, formValues.lastName);
-            this.toastr.success('Profile Saved');
+            this.authService.updateCurrentUser(formValues.firstName, formValues.lastName).subscribe(function () {
+                _this.toastr.success('Profile Saved');
+            });
         }
+    };
+    ProfileComponent.prototype.logout = function () {
+        var _this = this;
+        this.authService.logout().subscribe(function () {
+            _this.router.navigate(['/user/login']);
+        });
     };
     ProfileComponent = __decorate([
         core_1.Component({

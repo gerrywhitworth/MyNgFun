@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
-var Rx_1 = require('rxjs/Rx');
+var Observable_1 = require('rxjs/Observable');
 var AuthService = (function () {
     function AuthService(http) {
         this.http = http;
@@ -26,7 +26,7 @@ var AuthService = (function () {
                 _this.currentUser = resp.json().user;
             }
         }).catch(function (error) {
-            return Rx_1.Observable.of(false);
+            return Observable_1.Observable.of(false);
         });
     };
     AuthService.prototype.isAuthenticated = function () {

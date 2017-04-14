@@ -15,7 +15,7 @@ var NavBarComponent = (function () {
     function NavBarComponent(auth, eventService) {
         this.auth = auth;
         this.eventService = eventService;
-        this.searchTerm = "";
+        this.searchTerm = '';
     }
     NavBarComponent.prototype.searchSessions = function (searchTerm) {
         var _this = this;

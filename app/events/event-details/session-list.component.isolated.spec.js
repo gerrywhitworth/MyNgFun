@@ -14,7 +14,7 @@ describe('SessionListComponent', function () {
             component.filterBy = 'intermediate';
             component.sortBy = 'name';
             component.eventId = 3;
-            component.ngOnChanges();
+            component.ngOnChanges({});
             expect(component.visibleSessions.length).toBe(2);
         });
         it('should sort the sessions correctly', function () {
@@ -24,7 +24,7 @@ describe('SessionListComponent', function () {
             component.filterBy = 'all';
             component.sortBy = 'name';
             component.eventId = 3;
-            component.ngOnChanges();
+            component.ngOnChanges({});
             expect(component.visibleSessions[2].name).toBe('session 3');
         });
     });

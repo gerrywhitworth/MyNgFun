@@ -43,6 +43,8 @@ var ProfileComponent = (function () {
         var _this = this;
         if (this.profileForm.valid) {
             this.authService.updateCurrentUser(formValues.firstName, formValues.lastName).subscribe(function () {
+                console.log('here');
+                console.log('toastr', _this.toastr);
                 _this.toastr.success('Profile Saved');
             });
         }
@@ -55,7 +57,8 @@ var ProfileComponent = (function () {
     };
     ProfileComponent = __decorate([
         core_1.Component({
-            templateUrl: 'app/user/profile.component.html',
+            moduleId: module.id,
+            templateUrl: 'profile.component.html',
             styles: ["\n    em {float:right; color:#E05C65; padding-left:10px;}\n    .error input {background-color:#E3C3C5;}\n    .error ::-webkit-input-placeholder { color: #999; } \n    .error :-moz-placeholder { color: #999; }\n    .error ::-moz-placeholder { color: #999; }\n    .error :ms-input-placeholder  { color: #999; }\n  "]
         }),
         __param(2, core_1.Inject(toastr_service_1.TOASTR_TOKEN)), 

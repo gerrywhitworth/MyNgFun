@@ -21,6 +21,9 @@ var navbar_component_1 = require('./nav/navbar.component');
 var _404_component_1 = require('./errors/404.component');
 var routes_1 = require('./routes');
 var auth_service_1 = require('./user/auth.service');
+var user_module_1 = require('./user/user.module');
+var toastr = window['toastr'];
+var jQuery = window['$'];
 var AppModule = (function () {
     function AppModule() {
     }
@@ -31,6 +34,7 @@ var AppModule = (function () {
                 forms_1.FormsModule,
                 http_1.HttpModule,
                 forms_1.ReactiveFormsModule,
+                user_module_1.UserModule,
                 router_1.RouterModule.forRoot(routes_1.appRoutes)],
             declarations: [
                 events_app_component_1.EventsAppComponent,
@@ -72,4 +76,5 @@ function checkDirtyState(component) {
         return window.confirm('You have not saved this event, Do you really want to cancel?');
     return true;
 }
+exports.checkDirtyState = checkDirtyState;
 //# sourceMappingURL=app.module.js.map

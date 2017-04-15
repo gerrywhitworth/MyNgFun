@@ -16,6 +16,7 @@ var LoginComponent = (function () {
         this.authService = authService;
         this.router = router;
         this.loginInvalid = false;
+        this.mouseoverLogin = false;
     }
     LoginComponent.prototype.login = function (formValues) {
         var _this = this;
@@ -33,7 +34,8 @@ var LoginComponent = (function () {
     };
     LoginComponent = __decorate([
         core_1.Component({
-            templateUrl: 'app/user/login.component.html',
+            moduleId: module.id,
+            templateUrl: 'login.component.html',
             styles: ["\n    em {float:right; color:#E05C65; padding-left:10px;}\n  "]
         }), 
         __metadata('design:paramtypes', [auth_service_1.AuthService, router_1.Router])

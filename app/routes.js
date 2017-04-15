@@ -1,7 +1,7 @@
 "use strict";
 var index_1 = require('./events/index');
 var _404_component_1 = require('./errors/404.component');
-// tslint:disable-next-line:typedef-whitespace
+var user_routes_1 = require('./user/user.routes');
 exports.appRoutes = [
     { path: 'events/new', component: index_1.CreateEventComponent, canDeactivate: ['canDeactivateCreateEvent'] },
     { path: 'events', component: index_1.EventsListComponent, resolve: { events: index_1.EventListResolver } },
@@ -9,6 +9,9 @@ exports.appRoutes = [
     { path: 'events/session/new', component: index_1.CreateSessionComponent },
     { path: '404', component: _404_component_1.Error404Component },
     { path: '', redirectTo: '/events', pathMatch: 'full' },
-    { path: 'user', loadChildren: 'app/user/user.module#UserModule' }
+    {
+        path: 'user',
+        children: user_routes_1.userRoutes
+    }
 ];
 //# sourceMappingURL=routes.js.map

@@ -15,7 +15,7 @@ var NavBarComponent = (function () {
     function NavBarComponent(auth, eventService) {
         this.auth = auth;
         this.eventService = eventService;
-        this.searchTerm = '';
+        this.searchTerm = "";
     }
     NavBarComponent.prototype.searchSessions = function (searchTerm) {
         var _this = this;
@@ -26,7 +26,8 @@ var NavBarComponent = (function () {
     NavBarComponent = __decorate([
         core_1.Component({
             selector: 'nav-bar',
-            templateUrl: 'app/nav/navbar.component.html',
+            moduleId: module.id,
+            templateUrl: 'navbar.component.html',
             styles: ["\n    .nav.navbar-nav {font-size:15px} \n    #searchForm {margin-right:100px; } \n    @media (max-width: 1200px) {#searchForm {display:none}}\n    li > a.active { color: #F97924; }\n  "],
         }), 
         __metadata('design:paramtypes', [auth_service_1.AuthService, index_1.EventService])

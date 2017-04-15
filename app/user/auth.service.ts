@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import {IUser} from './user.model';
+import {IUser} from './user.model'
 import { Http, Response, Headers, RequestOptions} from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class AuthService {
-  public currentUser:IUser;
+  public currentUser:IUser
 
   constructor(private http: Http) {}
 
@@ -21,7 +21,7 @@ export class AuthService {
       }
     }).catch(error => {
       return Observable.of(false);
-    });
+    })
   }
   
   isAuthenticated() {
@@ -33,7 +33,7 @@ export class AuthService {
       if(response._body) {
         return response.json();
       } else {
-        return {};
+        return {}
       }
     })
     .do(currentUser => {
@@ -56,7 +56,7 @@ export class AuthService {
 
   logout() {
     this.currentUser = undefined;
-    
+
     let headers = new Headers({ 'Content-Type': 'application/json'});
     let options = new RequestOptions({headers: headers});
     

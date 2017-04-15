@@ -2,7 +2,7 @@
 var testing_1 = require('@angular/core/testing');
 var core_1 = require('@angular/core');
 var session_list_component_1 = require('./session-list.component');
-// import { UpvoteComponent } from './upvote.component'
+//import { UpvoteComponent } from './upvote.component'
 var duration_pipe_1 = require('../shared/duration.pipe');
 var auth_service_1 = require('../../user/auth.service');
 var voter_service_1 = require('./voter.service');
@@ -45,9 +45,9 @@ describe('SessionListComponent', function () {
             component.filterBy = 'all';
             component.sortBy = 'name';
             component.eventId = 4;
-            component.ngOnChanges();
+            component.ngOnChanges({});
             fixture.detectChanges();
-            // expect(element.querySelector('[well-title]').textContent).toContain('Session 1');
+            //expect(element.querySelector('[well-title]').textContent).toContain('Session 1');
             expect(debugEl.query(platform_browser_1.By.css('[well-title]')).nativeElement.textContent).toContain('Session 1');
         });
     });

@@ -17,7 +17,7 @@ var SessionListComponent = (function () {
         this.voterService = voterService;
         this.visibleSessions = [];
     }
-    SessionListComponent.prototype.ngOnChanges = function () {
+    SessionListComponent.prototype.ngOnChanges = function (changes) {
         if (this.sessions) {
             this.filterSessions(this.filterBy);
             this.sortBy === 'name' ? this.visibleSessions.sort(sortByNameAsc) : this.visibleSessions.sort(sortByVotesDesc);
@@ -65,7 +65,8 @@ var SessionListComponent = (function () {
     SessionListComponent = __decorate([
         core_1.Component({
             selector: 'session-list',
-            templateUrl: '/app/events/event-details/session-list.component.html',
+            moduleId: module.id,
+            templateUrl: 'session-list.component.html',
             styles: ['collapsible-well h6 {margin-top:-5px; margin-bottom:10px }'],
         }), 
         __metadata('design:paramtypes', [auth_service_1.AuthService, voter_service_1.VoterService])

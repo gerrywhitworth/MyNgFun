@@ -1,14 +1,14 @@
-import { Routes } from '@angular/router';
+import { Routes } from '@angular/router'
 import { 
   EventsListComponent, 
   EventDetailsComponent, 
   CreateEventComponent, 
   EventListResolver,
   CreateSessionComponent,
-  EventResolver } from './events/index';
-import { Error404Component } from './errors/404.component';
+  EventResolver } from './events/index'
+import { Error404Component } from './errors/404.component'
+import { userRoutes } from './user/user.routes'
 
-// tslint:disable-next-line:typedef-whitespace
 export const appRoutes : Routes = [
   { path: 'events/new', component: CreateEventComponent, canDeactivate: ['canDeactivateCreateEvent'] },
   { path: 'events', component: EventsListComponent, resolve: {events: EventListResolver}},
@@ -16,5 +16,9 @@ export const appRoutes : Routes = [
   { path: 'events/session/new', component: CreateSessionComponent },
   { path: '404', component: Error404Component },
   { path: '', redirectTo: '/events', pathMatch: 'full' },
-  { path: 'user', loadChildren: 'app/user/user.module#UserModule' }
-];
+  { 
+    path: 'user', 
+    children: userRoutes
+    // loadChildren: 'app/user/user.module#UserModule' 
+  }
+]

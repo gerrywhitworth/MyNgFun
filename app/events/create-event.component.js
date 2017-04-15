@@ -30,7 +30,8 @@ var CreateEventComponent = (function () {
     };
     CreateEventComponent = __decorate([
         core_1.Component({
-            templateUrl: 'app/events/create-event.component.html',
+            moduleId: module.id,
+            templateUrl: 'create-event.component.html',
             styles: ["\n    em {float:right; color:#E05C65; padding-left:10px;}\n    .error input {background-color:#E3C3C5;}\n    .error ::-webkit-input-placeholder { color: #999; } \n    .error :-moz-placeholder { color: #999; }\n    .error ::-moz-placeholder { color: #999; }\n    .error :ms-input-placeholder  { color: #999; }\n  "]
         }), 
         __metadata('design:paramtypes', [router_1.Router, index_1.EventService])
